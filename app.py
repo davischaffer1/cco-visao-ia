@@ -15,7 +15,7 @@ genai.configure(api_key=CHAVE_GEMINI)
 
 URL_LIVE_SBCH = httpswww.youtube.comwatchv=qlDB6AbQyAw
 
-def capturar_frame_youtube()
+def capturar_frame_youtube():
     # 1. Acha o link real do vídeo por trás do YouTube
     ydl_opts = {'format' 'best[ext=mp4]best', 'quiet' True}
     try
