@@ -18,7 +18,11 @@ URL_LIVE_SBCH = "https://www.youtube.com/watch?v=qlDB6AbQyAw"
 
 def capturar_frame_youtube():
     # 1. Acha o link real do vídeo por trás do YouTube
-    ydl_opts = {'format': 'best[ext=mp4]/best', 'quiet': True}
+    ydl_opts = {
+        'format': 'best',
+        'quiet': True,
+        'extractor_args': {'youtube': {'player_client': ['android', 'web']}}
+    }
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(URL_LIVE_SBCH, download=False)
